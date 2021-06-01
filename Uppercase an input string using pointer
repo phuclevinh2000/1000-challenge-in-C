@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
+
+#define SIZE 64
+
+void showArray(char *a);
+void up(char *a);
+
+int main()
+{
+	char str[SIZE];
+	
+	/*Input array*/
+	fgets(str,SIZE,stdin);
+	
+	/*Upper case the string*/
+	up(str);
+	
+	/* Display the unsorted array */
+	showArray(str);
+	
+}
+
+void showArray(char *a)
+{
+	int x;
+
+	printf("%s", a);
+}
+
+void up(char *a)
+{
+	int x;
+
+	for(x=0;x<SIZE;x++)
+		*(a+x) = toupper(*(a+x));
+}
